@@ -9,5 +9,5 @@ Currently, two official plugins are available:
 
 # In this project
 
-In this project, the API will be used # https://api.spacexdata.com/v3
+In this project, the API will be used: https://api.spacexdata.com/v3
 to display a list of spacesX launches
