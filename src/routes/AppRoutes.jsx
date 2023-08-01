@@ -1,4 +1,4 @@
-import { Home } from "../components/pages/home";
+import { Home } from "../components/pages/Home";
 import { Launch } from "../components/pages/Launch";
 import { useRoutes } from "react-router-dom";
 
