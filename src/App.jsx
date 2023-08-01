@@ -1,18 +1,13 @@
-import { Launches } from "./components/Launches"
-import { UseGetDataLaunches } from "./hooks/UseGetData"
+import { BrowserRouter } from "react-router-dom"
+import { AppRoutes } from "./routes/AppRoutes"
 
 function App() {
 
-  const { launch } = UseGetDataLaunches()
-
   return (
     <div>
-      <h1>Welcome!</h1>
-
-      <div>
-        {launch?.map(data => <Launches key={data.flight_number} data={data}/>)}
-      </div>
-      
+      <BrowserRouter>
+        <AppRoutes/>  
+      </BrowserRouter>
     </div>
   )
 }
