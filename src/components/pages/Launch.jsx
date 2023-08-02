@@ -11,7 +11,7 @@ function Launch() {
                 <h1 className="text-3xl bg-cyan-600 p-3 mt-10 rounded-md">SpaceX Launches</h1>
             </div>
 
-            <div className="grid justify-items-center w-full grid-cols-1 mt-8 mb-10 md:grid-cols-2">
+            <div className="grid justify-items-center w-full grid-cols-1 mt-8 mb-10 md:grid-cols-2 2xl:grid-cols-3">
                 {launch?.map(items => <Launches key={items.flight_number} data={items}/>)}
             </div>
         </div>
