@@ -15,6 +15,9 @@ function Launches(data) {
                     .format("DD/MM/YYYY")}
                 </span>
             </div>
+            <div className="grid float-left p-2 rounded-lg mt-1 bg-cyan-600">
+                <button>More detail</button>
+            </div>
         </div>
     )
 }
