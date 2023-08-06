@@ -1,8 +1,11 @@
 import dayjs from "dayjs"
 import "dayjs/locale/es"
+import { Link } from "react-router-dom"
 import { FcCalendar } from "react-icons/fc"
 
 function Launches(data) {
+
+ 
     return(
         <div className="mt-3 bg-amber-400 w-96 p-4 rounded-md text-lg">
             <span>Mission <strong>{data.data.mission_name}</strong></span>
@@ -16,7 +19,9 @@ function Launches(data) {
                 </span>
             </div>
             <div className="grid float-left p-2 rounded-lg mt-1 bg-cyan-600">
-                <button>More detail</button>
+                <Link to={`/launch/:${data.data.flight_number}`}>
+                    <button>More detail</button>
+                </Link>
             </div>
         </div>
     )
