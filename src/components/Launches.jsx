@@ -19,7 +19,7 @@ function Launches(data) {
                 </span>
             </div>
             <div className="grid float-left p-2 rounded-lg mt-1 bg-cyan-600">
-                <Link to={`/launch/:${data.data.flight_number}`}>
+                <Link to={`/launch/${data.data.flight_number}`}>
                     <button>More detail</button>
                 </Link>
             </div>
