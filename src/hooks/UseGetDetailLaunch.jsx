@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import * as API from "../services/launches"
 
 function UseGetDatailLaunches(launchId) {
-    const [detailLaunch, setDetailLaunch] = useState(null)
+    const [detailLaunch, setDetailLaunch] = useState({})
 
     useEffect(() => {
         API.getDetailLaunch(launchId).then(setDetailLaunch).catch(console.log)
