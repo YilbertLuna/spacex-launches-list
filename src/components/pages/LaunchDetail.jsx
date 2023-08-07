@@ -7,6 +7,8 @@ import { IoMdArrowBack } from "react-icons/io"
 import dayjs from "dayjs";
 import "dayjs/locale/es"
 import { Link } from "react-router-dom";
+import { NotFound } from "../NotFound";
+import { Loading } from "../Loading";
 
 
 function LaunchDetail() {
@@ -15,12 +17,8 @@ function LaunchDetail() {
 
     const { detailLaunch } = UseGetDatailLaunches(launchId)
 
-    return(
-        <div className="flex flex-col items-center mb-7">
-            <div className="flex justify-center">
-                <h1 className="text-3xl bg-cyan-600 p-3 mt-10 rounded-md">SpaceX Launches</h1>
-            </div>
-
+    function loadingAndNotFound(){
+        if (detailLaunch) return (
             <div className="grid mt-10 bg-amber-400 p-4 w-72 rounded-md text-lg sm:w-96">
                 <span>
                     <p className="mt-2">Rocket name: <strong>{detailLaunch.rocket?.rocket_name}</strong></p>
@@ -42,7 +40,17 @@ function LaunchDetail() {
                     <button className="flex items-center p-3 mt-2 rounded-lg bg-cyan-600"> <IoMdArrowBack className="mr-2"/> Back</button>
                 </Link>
             </div>
+        )
+        if(!detailLaunch) return <NotFound/>
+        else return <Loading/>
+    }
 
+    return(
+        <div className="flex flex-col items-center mb-7">
+            <div className="flex justify-center">
+                <h1 className="text-3xl bg-cyan-600 p-3 mt-10 rounded-md">SpaceX Launches</h1>
+            </div>
+            {loadingAndNotFound()}
         </div>
     );
 }
