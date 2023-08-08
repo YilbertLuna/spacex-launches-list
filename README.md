@@ -13,4 +13,4 @@ In this project, the API will be used: https://api.spacexdata.com/v3
 to display a list of spacesX launches
 
 # link to project
-https://spacex-launches-list-fq76ach5h-yilbertluna.vercel.app/launches
+https://spacex-launches-list.vercel.app
